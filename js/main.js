@@ -54,7 +54,7 @@ function renderCourseCard(course) {
           <span class="course-card-category">${escapeHTML(course.category)}</span>
         </div>
         <div class="course-card-body">
-          <h3 class="course-card-title">${escapeHTML(course.title)}</h3>
+          <h2 class="course-card-title">${escapeHTML(course.title)}</h3>
           <p class="course-card-instructor">By ${escapeHTML(course.instructor)}</p>
           <div class="course-card-meta">
             <span class="course-card-price">${formatPrice(course.price)}</span>
