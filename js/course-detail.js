@@ -1,9 +1,4 @@
-/**
- * course-detail.js
- * Reads the course ID from the URL query string, finds the matching
- * course in mock data, and renders its details. Also handles the
- * "Enroll Now" button and the not-found state.
- */
+
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("course-detail-container");
   const notFoundTemplate = document.getElementById("not-found-template");
@@ -58,11 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-/** Displays a temporary success toast notification */
 function showToast(title, message) {
   let toast = document.getElementById("toast");
-
-  // Create the toast element once, reuse it afterwards
   if (!toast) {
     toast = document.createElement("div");
     toast.id = "toast";

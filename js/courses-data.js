@@ -1,7 +1,4 @@
-/**
- * Mock course data
- * In a real application this would come from an API/backend.
- */
+// mock data
 const COURSES = [
   {
     id: 1,
