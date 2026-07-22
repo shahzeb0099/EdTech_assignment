@@ -1,96 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EdTech Academy</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body data-page="home">
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html">EdTech Academy</a>
-        <nav class="nav-links" aria-label="Primary navigation">
-          <a class="active" href="index.html">Home</a>
-          <a href="courses.html">Courses</a>
-          <a href="course-detail.html?id=1">Featured Course</a>
-        </nav>
-      </div>
-    </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <h1>Learn skills that move your career forward.</h1>
-            <p>Explore practical courses in development, design, and marketing with expert mentors and flexible learning paths.</p>
-            <div class="btns" style="margin-top: 1.25rem;">
-              <a class="btn btn-primary" href="courses.html">Browse Courses</a>
-              <a class="btn btn-secondary" href="#testimonials">See Success Stories</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EdTech · Learn Skills That Matter</title>
+  <meta name="description"
+    content="EdTech is an online learning platform offering courses in development, design and marketing taught by industry experts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- header -->
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo" aria-label="EdTech Home">
+        <span class="logo-mark">E</span>
+        EdTech
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html" class="active" aria-current="page" aria-label="Home">Home</a>
+        <a href="courses.html" aria-label="Browse Courses">Courses</a>
+        <a href="index.html#testimonials" aria-label="View Testimonials">Testimonials</a>
+      </nav>
+
+
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Learn new skills, <span>build your career</span></h1>
+          <p>
+            Join thousands of learners mastering development, design, and marketing
+            through practical, expert-led courses you can take at your own pace.
+          </p>
+          <div class="hero-actions">
+            <a href="courses.html" class="btn btn-primary btn-lg" aria-label="Explore Courses">Explore Courses</a>
+            <a href="#popular-courses" class="btn btn-outline btn-lg" aria-label="See What's Popular">See What's
+              Popular</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="./images/react.webp" alt="React Development Course" loading="eager" fetchpriority="high" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Section -->
+    <section class="section" id="popular-courses">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Popular Courses</span>
+          <h2>Start learning today</h2>
+          <p>Hand-picked courses across development, design, and marketing to help you level up fast.</p>
+        </div>
+
+        <div class="course-grid" id="popular-courses-grid" aria-label="Popular Courses">
+
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="courses.html" class="btn btn-primary">
+            Browse All Courses
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonials -->
+    <section class="section section-bg" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Testimonials</span>
+          <h2>What our students say</h2>
+          <p>Real feedback from learners who have grown their skills and careers with EdTech.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card" aria-label="Testimonial from Priya Nair">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "The React course was incredibly practical. I built three real projects and landed a
+              frontend developer role within two months of finishing."
+            </p>
+            <div class="testimonial-person">
+              <img src="./images/pic1.webp" alt="Portrait of Priya Nair" loading="lazy" width="80" height="80"
+                decoding="async" />
+              <div>
+                <strong>Priya Nair</strong>
+                <span>Frontend Developer</span>
+              </div>
             </div>
-          </div>
-          <div class="hero-card">
-            <h2>Why learners choose us</h2>
-            <ul>
-              <li>Live project-based lessons</li>
-              <li>Mentor support and weekly feedback</li>
-              <li>Flexible learning for busy schedules</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <section class="section">
-        <div class="container">
-          <div class="section-title">
-            <h2>Popular Courses</h2>
-            <a href="courses.html">View all</a>
-          </div>
-          <div id="popular-courses" class="grid course-grid"></div>
-        </div>
-      </section>
+          <article class="testimonial-card" aria-label="Testimonial from Arjun Das">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "As a complete beginner in design, the UI/UX course gave me the confidence and
+              portfolio pieces I needed to switch careers."
+            </p>
+            <div class="testimonial-person">
+              <img src="./images/pic1.webp" alt="Portrait of Arjun Das" loading="lazy" width="80" height="80"
+                decoding="async" />
+              <div>
+                <strong>Arjun Das</strong>
+                <span>Product Designer</span>
+              </div>
+            </div>
+          </article>
 
-      <section id="testimonials" class="section">
-        <div class="container">
-          <div class="section-title">
-            <h2>Student Testimonials</h2>
-          </div>
-          <div class="testimonials">
-            <article class="quote-card">
-              <p>“The projects were practical, and the feedback helped me land my first freelance gig.”</p>
-              <strong>— Maya R.</strong>
-            </article>
-            <article class="quote-card">
-              <p>“I loved the structure. I went from beginner to building apps in just a few weeks.”</p>
-              <strong>— Theo M.</strong>
-            </article>
-            <article class="quote-card">
-              <p>“The marketing course helped me improve our campaign performance immediately.”</p>
-              <strong>— Priya S.</strong>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div class="footer-block">
-          <h3>EdTech Academy</h3>
-          <p>Grow your skills with practical, career-focused learning experiences.</p>
-        </div>
-        <div class="footer-block"></div>
-        <div class="footer-block">
-          <h3>Quick Links</h3>
-          <a href="index.html">Home</a><br>
-          <a href="courses.html">Courses</a><br>
-          <a href="course-detail.html?id=1">Featured Course</a>
+          <article class="testimonial-card" aria-label="Testimonial from Meera Iyer">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "Clear explanations, well-paced lessons, and great instructor support. The marketing
+              course paid for itself within the first campaign I ran."
+            </p>
+            <div class="testimonial-person">
+              <img src="./images/pic1.webp" alt="Portrait of Meera Iyer" loading="lazy" width="80" height="80"
+                decoding="async" />
+              <div>
+                <strong>Meera Iyer</strong>
+                <span>Marketing Manager</span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
-      <div class="container footer-bottom">© 2026 EdTech Academy. All rights reserved.</div>
-    </footer>
+    </section>
+  </main>
 
-    <script src="courses.js"></script>
-    <script src="app.js"></script>
-  </body>
+  <!-- footer -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="EdTech Home">
+            <span class="logo-mark">E</span>
+            EdTech
+          </a>
+          <p>Practical, expert-led courses to help you build real skills and grow your career.</p>
+        </div>
+
+        <div class="footer-col">
+          <ul>
+            <li><a href="index.html" aria-label="Home">Home</a></li>
+            <li><a href="courses.html" aria-label="Courses">Courses</a></li>
+            <li><a href="index.html#testimonials" aria-label="Testimonials">Testimonials</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> EdTech. All rights reserved.</span>
+        <span aria-label="Built by M.S">Built by M.S</span>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="js/courses-data.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/home.js"></script>
+</body>
+
 </html>

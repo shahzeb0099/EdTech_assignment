@@ -1,52 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Details | EdTech Academy</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body data-page="course-detail">
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html">EdTech Academy</a>
-        <nav class="nav-links" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="courses.html">Courses</a>
-          <a class="active" href="course-detail.html?id=1">Featured Course</a>
-        </nav>
-      </div>
-    </header>
 
-    <main class="page-shell">
-      <div class="container detail-layout">
-        <div id="course-detail"></div>
-      </div>
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Details · EdTech</title>
+  <meta name="description"
+    content="View detailed information about this EdTech course, including price, instructor, and description." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div class="footer-block">
-          <h3>EdTech Academy</h3>
-          <p>Grow your skills with practical, career-focused learning experiences.</p>
-        </div>
-        <div class="footer-block">
-          <h3>Quick Links</h3>
-          <a href="index.html">Home</a><br>
-          <a href="courses.html">Courses</a><br>
-          <a href="course-detail.html?id=1">Featured Course</a>
-        </div>
-        <div class="footer-block">
-          <h3>Support</h3>
-          <a href="#">About Us</a><br>
-          <a href="#">Contact</a><br>
-          <a href="#">Help Center</a>
-        </div>
-      </div>
-      <div class="container footer-bottom">© 2026 EdTech Academy. All rights reserved.</div>
-    </footer>
+<body>
 
-    <script src="courses.js"></script>
-    <script src="app.js"></script>
-  </body>
+  <!--  Header  -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo" aria-label="EdTech Home">
+        <span class="logo-mark">E</span>
+        EdTech
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html" class="active" aria-current="page" aria-label="Home">Home</a>
+        <a href="courses.html" aria-label="Browse Courses">Courses</a>
+        <a href="index.html#testimonials" aria-label="View Testimonials">Testimonials</a>
+      </nav>
+
+
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="courses.html">Courses</a> <span>/</span> <span>Course Details</span>
+      </nav>
+      <div class="detail-grid" id="course-detail-container">
+      </div>
+
+      <!--  Not Found State  -->
+      <div class="detail-not-found" id="not-found-template" hidden>
+        <h1>Course not found</h1>
+        <p>We couldn't find a course matching that ID. It may have been removed or the link is incorrect.</p>
+        <a href="courses.html" class="btn btn-primary">Back to Courses</a>
+      </div>
+    </div>
+  </main>
+
+  <!--  Footer  -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="EdTech Home">
+            <span class="logo-mark">E</span>
+            EdTech
+          </a>
+          <p>Practical, expert-led courses to help you build real skills and grow your career.</p>
+        </div>
+
+        <div class="footer-col">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="index.html" aria-label="Home">Home</a></li>
+            <li><a href="courses.html" aria-label="Courses">Courses</a></li>
+            <li><a href="index.html#testimonials" aria-label="Testimonials">Testimonials</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> EdTech. All rights reserved.</span>
+        <span aria-label="Built by M.S">Built by M.S</span>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="js/courses-data.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/course-detail.js"></script>
+</body>
+
 </html>
